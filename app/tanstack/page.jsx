@@ -61,7 +61,7 @@ const columns = [
     )
   }),
 ]
-export default function Home() {
+export default function tanstack() {
   const [data] = React.useState(() => [...mockData])
   const [sorting, setSorting] = React.useState([]);
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -174,7 +174,6 @@ export default function Home() {
           >
             <ChevronLeft size={20} />
           </button>
-
           <span className="flex items-center">
             <input
               min={1}
@@ -189,7 +188,6 @@ export default function Home() {
             />
             <span className="ml-1">of {table.getPageCount()}</span>
           </span>
-
           <button
             className="p-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
             onClick={() => table.nextPage()}
